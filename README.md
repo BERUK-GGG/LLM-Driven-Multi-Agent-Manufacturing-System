@@ -8,7 +8,7 @@ A robotic crane factory controlled by LLM-powered agents. The crane picks parts 
 ![GPT-4.1-mini demo](src/GPT-4.1.mini-demo.gif)
 
 ### Llama 3.1 8B — poor decisions, unreliable sequencing
-![Llama 8B demo](src/GPT-4-1-mini-Demo.gif)
+![Llama 8B demo](src/llama-3.1-8B-Demo.gif)
 
 > Llama 3.1 8B frequently misroutes parts, stalls on decisions, or calls tools in the wrong order. GPT-4.1-mini reliably follows all routing rules and exploits the crane opportunistically while machines run.
 
