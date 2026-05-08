@@ -2,29 +2,7 @@
 
 An LLM-orchestrated crane factory where GPT-4.1-mini plans each task as a JSON action sequence. Three specialized agents handle sensing, crane movement, and process machine control — but a Python orchestrator sequences them and all concurrency decisions remain in code.
 
-## Architecture
 
-```
-                        ┌──────────────────────────────┐
-                        │         Orchestrator          │
-                        │  (Python — sequences tasks)   │
-                        │                               │
-                        │  • polls sensors every 2s     │
-                        │  • queues detected parts      │
-                        │  • calls agents in sequence   │
-                        └────┬──────────┬───────────────┘
-                             │          │
-              ┌──────────────┘          └────────────────┐
-              │                                          │
-   ┌──────────▼──────────┐                   ┌──────────▼──────────┐
-   │     SourceAgent      │                   │     CraneAgent       │
-   │                      │                   │     ProcessAgent      │
-   │  function-calling    │                   │                      │
-   │  read_sensors →      │                   │  plan_run() →        │
-   │  {"source1": bool,   │                   │  {"steps": [...]}    │
-   │   "source2": bool}   │                   │  Python executes     │
-   └──────────────────────┘                   └──────────────────────┘
-```
 
 ## The Three Agents
 

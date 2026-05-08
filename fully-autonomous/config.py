@@ -16,7 +16,7 @@ MODEL = "gpt-4.1-mini"
 async_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
-## USE free NVIDIA API for testing if desired or Ollama local API for locall llm
+## USE free NVIDIA API for testing if desired or Ollama  API for local llm
 """
 MODEL = "meta/llama-3.1-8b-instruct"
 

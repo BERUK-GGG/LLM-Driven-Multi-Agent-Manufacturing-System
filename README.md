@@ -5,7 +5,7 @@ A robotic crane factory controlled by LLM-powered agents. The crane picks parts 
 ## Demo — Model Comparison
 
 ### GPT-4.1-mini — correct decisions, true concurrency
-![GPT-4.1-mini demo](src/GPT-4-1-mini-Demo.gif)
+![GPT-4.1-mini demo](src/GPT-4.1.mini-demo.gif)
 
 ### Llama 3.1 8B — poor decisions, unreliable sequencing
 ![Llama 8B demo](src/GPT-4-1-mini-Demo.gif)
@@ -53,7 +53,6 @@ sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which java))
 ```
 Run the simulation
 ```bash
-unzip CraneSimulation.zip
 cd CraneSimulation
 java --module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml \
   -jar CraneSimulation/simulation.jar

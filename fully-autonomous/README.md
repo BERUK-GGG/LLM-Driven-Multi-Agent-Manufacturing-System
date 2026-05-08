@@ -2,27 +2,20 @@
 
 A factory automation system where independent AI agents communicate through a shared event bus and make their own decisions. The only human input is typing `start factory` at launch.
 
-## How to Run
 
-Start the JavaFX simulation first:
-```bash
-java --module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml \
-  -jar ../CraneSimulation/simulation.jar
-```
 
 Then start the agents:
 ```bash
 python main.py
-# > start factory
 ```
 
 ## Architecture
 
 ```
                         ┌─────────────────────────────────────────┐
-                        │             Message Bus                  │
-                        │  (async pub/sub — asyncio.Queue per      │
-                        │   subscriber, typed event routing)       │
+                        │             Message Bus                 │
+                        │  (async pub/sub — asyncio.Queue per     │
+                        │   subscriber, typed event routing)      │
                         └──────┬──────┬──────────┬────────────────┘
                                │      │          │
           ┌────────────────────┘      │          └──────────────────┐
