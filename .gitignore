@@ -7,3 +7,5 @@ CLAUDE.md
 */__pycache__/
 
 CraneSimulation.zip
+
+.env
